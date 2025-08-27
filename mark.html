@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>Calculate Total Marks</h2>
+        <label for="subject1">Subject 1:</label>
+        <input type="number" id="subject1" placeholder="Enter marks for Subject 1">
+        
+        <label for="subject2">Subject 2:</label>
+        <input type="number" id="subject2" placeholder="Enter marks for Subject 2">
+        
+        <label for="subject3">Subject 3:</label>
+        <input type="number" id="subject3" placeholder="Enter marks for Subject 3">
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function calculateTotal() {
+            const subject1 = parseFloat(document.getElementById('physics').value) || 0;
+            const subject2 = parseFloat(document.getElementById('chemistry').value) || 0;
+            const subject3 = parseFloat(document.getElementById('math').value) || 0;
+            
+            const total = subject1 + subject2 + subject3;
+            
+            document.getElementById('result').innerText = `Total Marks: ${total}`;
+        }
+    </script>
+</body>
+</html>
+
+    <script>
+        function calculateTotal() {
+            const subject1 = parseFloat(document.getElementById('subject1').value) || 0;
+            const subject2 = parseFloat(document.getElementById('subject2').value) || 0;
+            const subject3 = parseFloat(document.getElementById('subject3').value) || 0;
+            
+            const total = subject1 + subject2 + subject3;
+            
+            document.getElementById('result').innerText = `Total Marks: ${total}`;
+        }
+    </script>
+</body>
+</html>
